@@ -1,0 +1,2 @@
+rootProject.name = "NewUiReadEra"
+include ':app'
