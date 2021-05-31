@@ -1,4 +1,4 @@
-package com.example.newuireadera.ui.collection;
+package com.example.newuireadera.ui.category;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,44 +13,45 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.newuireadera.adapter.TabMainAdpter;
-import com.example.newuireadera.databinding.FragmentCollectionBinding;
+import com.example.newuireadera.databinding.FragmentCategoryBinding;
 import com.example.newuireadera.databinding.FragmentSettingBinding;
+import com.example.newuireadera.ui.category.CategoryViewModel;
 import com.example.newuireadera.ui.setting.SettingViewModel;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
-public class CollectionFragment extends Fragment {
+public class CategoryFragment extends Fragment {
 
-    private CollectionViewModel collectionViewModel;
-    private FragmentCollectionBinding binding;
+    private CategoryViewModel categoryViewModel;
+    private FragmentCategoryBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        collectionViewModel =
-                new ViewModelProvider(this).get(CollectionViewModel.class);
+        categoryViewModel =
+                new ViewModelProvider(this).get(CategoryViewModel.class);
 
-        binding = FragmentCollectionBinding.inflate(inflater, container, false);
+        binding = FragmentCategoryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         return root;
     }
-
     @Override
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        initCollectionMain();
+        initTabCategory();
     }
 
-    public void initCollectionMain() {
+    public void initTabCategory() {
         List<String> mList = new ArrayList<>();
-        mList.add("Author");
-        mList.add("Series");
-        mList.add("Trash");
-        mList.add("Format");
-        RecyclerView revTabName = binding.rcvTabCollection;
+        mList.add("All");
+        mList.add("Reading Now");
+        mList.add("Favorites");
+        mList.add("Have Read");
+        mList.add("Collections");
+
+        RecyclerView revTabName = binding.rcvTabCategory;
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false);
         revTabName.setLayoutManager(linearLayoutManager);
         TabMainAdpter adapter = new TabMainAdpter(new TabMainAdpter.IClickTab() {

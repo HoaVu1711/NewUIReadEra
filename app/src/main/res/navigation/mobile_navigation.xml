@@ -10,12 +10,11 @@
         android:name="com.example.newuireadera.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
-
     <fragment
-        android:id="@+id/navigation_collection"
-        android:name="com.example.newuireadera.ui.collection.CollectionFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_collection" />
+        android:id="@+id/navigation_category"
+        android:name="com.example.newuireadera.ui.category.CategoryFragment"
+        android:label="@string/title_category"
+        tools:layout="@layout/fragment_category" />
 
     <fragment
         android:id="@+id/navigation_download"

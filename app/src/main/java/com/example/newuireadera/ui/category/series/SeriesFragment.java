@@ -1,4 +1,4 @@
-package com.example.newuireadera.ui.collection.series;
+package com.example.newuireadera.ui.category.series;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,12 +14,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.newuireadera.R;
 import com.example.newuireadera.adapter.AuthorAdapter;
-import com.example.newuireadera.adapter.TabMainAdpter;
-import com.example.newuireadera.databinding.FragmentAuthorBinding;
 import com.example.newuireadera.databinding.FragmentSeriesBinding;
 import com.example.newuireadera.model.Author;
 import com.example.newuireadera.model.Series;
-import com.example.newuireadera.ui.collection.author.AuthorViewModel;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -48,12 +45,12 @@ public class SeriesFragment extends Fragment {
     }
 
     public void initSeries() {
-        List<Series> mList = new ArrayList<>();
-        mList.add(new Series(R.drawable.ic_author_tab, "Manson Mark", "1"));
-        mList.add(new Series(R.drawable.ic_author_tab, "Manson Mark", "2"));
-        mList.add(new Series(R.drawable.ic_author_tab, "Manson Mark", "3"));
-        mList.add(new Series(R.drawable.ic_author_tab, "Manson Mark", "4"));
-        mList.add(new Series(R.drawable.ic_author_tab, "Manson Mark", "5"));
+        List<Author> mList = new ArrayList<>();
+        mList.add(new Author(R.drawable.ic_author_tab, "Manson Mark", "1"));
+        mList.add(new Author(R.drawable.ic_author_tab, "Manson Mark", "2"));
+        mList.add(new Author(R.drawable.ic_author_tab, "Manson Mark", "3"));
+        mList.add(new Author(R.drawable.ic_author_tab, "Manson Mark", "4"));
+        mList.add(new Author(R.drawable.ic_author_tab, "Manson Mark", "5"));
         RecyclerView revAuthor = binding.rcvTabSeries;
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false);
         revAuthor.setLayoutManager(linearLayoutManager);

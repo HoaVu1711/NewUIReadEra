@@ -9,7 +9,7 @@
     <item
         android:id="@+id/navigation_collection"
         android:icon="@drawable/ic_trash"
-        android:title="@string/title_collection" />
+        android:title="@string/title_category" />
 
     <item
         android:id="@+id/navigation_download"

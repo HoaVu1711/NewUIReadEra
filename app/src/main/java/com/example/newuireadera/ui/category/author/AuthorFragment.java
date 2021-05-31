@@ -1,4 +1,4 @@
-package com.example.newuireadera.ui.collection.author;
+package com.example.newuireadera.ui.category.author;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,11 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.newuireadera.R;
 import com.example.newuireadera.adapter.AuthorAdapter;
-import com.example.newuireadera.adapter.TabMainAdpter;
 import com.example.newuireadera.databinding.FragmentAuthorBinding;
-import com.example.newuireadera.databinding.FragmentCollectionBinding;
 import com.example.newuireadera.model.Author;
-import com.example.newuireadera.ui.collection.CollectionViewModel;
 
 import org.jetbrains.annotations.NotNull;
 

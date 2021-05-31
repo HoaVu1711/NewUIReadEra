@@ -18,10 +18,10 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class AuthorAdapter extends RecyclerView.Adapter<AuthorAdapter.ViewHolder> {
-    private List<Series> authorList;
+    private List<Author> authorList;
 
 
-    public void setData(List<Series>mList){
+    public void setData(List<Author>mList){
         authorList=mList;
         notifyDataSetChanged();
     }

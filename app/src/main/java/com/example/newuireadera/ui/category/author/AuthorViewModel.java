@@ -1,15 +1,16 @@
-package com.example.newuireadera.ui.collection;
+package com.example.newuireadera.ui.category.author;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class CollectionViewModel extends ViewModel {
+public class AuthorViewModel extends ViewModel {
+
     private MutableLiveData<String> mText;
 
-    public CollectionViewModel() {
+    public AuthorViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+        mText.setValue("This is home fragment");
     }
 
     public LiveData<String> getText() {
